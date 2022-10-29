@@ -49,13 +49,12 @@ match Bang /\%>79v.*\%<81v/
   let g:UltiSnipsExpandTrigger = '<tab>'
   let g:UltiSnipsJumpForwardTrigger = '<tab>'
   let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+  let g:UltiSnipsSnippetDirectories=["UltiSnips"]
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'airblade/vim-gitgutter'
   Plug 'tmhedberg/SimpylFold'
   let g:SimpylFold_docstring_preview = 1
-  Plug 'jayli/vim-easycomplete'
-  let g:easycomplete_tab_trigger="<c-space>"
   Plug 'rhysd/vim-clang-format'
   let g:clang_format#detect_style_filea = 1
   Plug 'dense-analysis/ale'
