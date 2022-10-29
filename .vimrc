@@ -7,7 +7,6 @@ filetype plugin indent on
 
 
 "spellcheck
-  setlocal spell
   set spelllang=en_gb
   inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
@@ -28,9 +27,8 @@ filetype plugin indent on
     \ set fileformat=unix 
 
 "colours over column 80 
-  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-  match OverLength /\%81v.\+/
-
+hi Bang ctermfg=red guifg=red
+match Bang /\%>79v.*\%<81v/
 
 "key mappings
   inoremap jj <esc>
