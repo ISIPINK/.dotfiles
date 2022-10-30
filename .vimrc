@@ -16,6 +16,7 @@ filetype plugin indent on
   set number
   set scrolloff=10
   set incsearch
+  autocmd VimEnter * NoMatchParen
 
  au BufNewFile,BufRead *.py
     \ set tabstop=4

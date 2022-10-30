@@ -2,6 +2,14 @@ priority -50
 
 extends c
 
+###########################################################################
+#			    custom 						  #
+###########################################################################
+
+snippet incc "including libaries in c++" b
+#include <${1:iostream}>
+endsnippet
+
 # We want to overwrite everything in parent ft.
 priority -49
 ###########################################################################
@@ -34,6 +42,7 @@ snippet main
 int main()
 {
 	${0}
+	return 0;
 }
 endsnippet
 
@@ -90,20 +99,22 @@ template <typename ${1:_InputIter}>
 endsnippet
 
 snippet cla "An entire .h generator" b
-#ifndef ${2:`!v substitute(easycomplete#Filename('$1_H','ClassName'),'.*','\U&\E','')`}
-#define $2
+#ifndef ${1: header name}
+#define $1
 
-class ${1:`!v substitute(substitute(easycomplete#Filename('$1','ClassName'),'^.','\u&',''), '_\(\w\)', '\u\1', 'g')`}
+class ${2:class name}
 {
 private:
-	$3
-
+	
 public:
-	$1();
-	virtual ~$1();
+//The Big Three: destructor, copy constructor, assignment operator. If your class needs either of these, it probably needs them all!
+	$2();
+	$2(const $2& that) = default;
+	$2& operator=(const $2& that);
+	~$2()= default;
 };
 
-#endif /* $2 */
+#endif /* $1 */
 endsnippet
 
 
