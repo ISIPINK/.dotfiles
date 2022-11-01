@@ -46,6 +46,8 @@ snippet beg "begin{} / end{}" bi
 \end{$1}
 endsnippet
 
+
+
 snippet cnt "Center" bi
 \begin{center}
 	${0:${VISUAL}}
@@ -83,9 +85,9 @@ snippet post "postulate" bi
 endsnippet
 
 snippet prf "Proof" bi
-\begin{myproof}[$1]
-	${0:${VISUAL}}
-\end{myproof}
+\begin{proof}
+	$1
+\end{proof}
 endsnippet
 
 snippet def "Definition" bi
@@ -145,10 +147,14 @@ snippet enum "Enumerate" bi
 \end{enumerate}
 endsnippet
 
-snippet item "Itemize" bi
+snippet itemize "Itemize" bi
 \begin{itemize}
 	\item ${0:${VISUAL}}
 \end{itemize}
+endsnippet
+
+snippet item "item" b
+\item 
 endsnippet
 
 snippet case "cases" bi
@@ -184,6 +190,17 @@ endsnippet
 ########
 # MATH #
 ########
+snippet inner "inner product" i
+\langle $1, $2 \rangle
+endsnippet
+
+snippet norm "norm notation" i
+||$1||
+endsnippet
+
+snippet implies " Rightarrow" i
+\Rightarrow
+endsnippet
 
 snippet for "forall" i
 \forall 
@@ -508,6 +525,13 @@ endsnippet
 ############
 # SECTIONS #
 ############
+snippet oef "oefening" b
+\oefening{${1:oefening nummer}}
+endsnippet
+
+snippet soef "oefening" b
+\suboefening{${1:suboefening nummer}}
+endsnippet
 
 snippet chap "Chapter" wi
 \chapter{$1${VISUAL}}
@@ -556,9 +580,8 @@ endsnippet
 ##########
 # CUSTOM #
 ##########
-snippet ss "writes double slash" 
+snippet ss "writes double slash" wi
 \\\\
-
 endsnippet
 
 
