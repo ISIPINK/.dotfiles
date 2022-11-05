@@ -1,0 +1,6 @@
+
+[user]
+	name = isi
+	email = isidoor.pinilloesquivel@student.uantwerpen.be
+[credential]
+	helper = cache --timeout=7200
