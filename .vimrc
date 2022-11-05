@@ -69,4 +69,5 @@ match Bang /\%>79v.*\%<81v/
   set conceallevel=1
   let g:tex_conceal='abdmg'
   Plug 'jayli/vim-easycomplete'
+  let g:easycomplete_tab_trigger="<c-space>"
   call plug#end()
