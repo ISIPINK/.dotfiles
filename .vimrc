@@ -16,6 +16,7 @@ filetype plugin indent on
   set number
   set scrolloff=10
   set incsearch
+  set ignorecase
   autocmd VimEnter * NoMatchParen
 
  au BufNewFile, BufRead *.py
@@ -35,7 +36,7 @@ match Bang /\%>79v.*\%<81v/
   noremap <F2> :NERDTreeToggle<cr>
   nnoremap <space> za
   noremap  <F4> :ClangFormat<cr>
-  autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:cppman <cword><CR>
+  autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:!cppman <cword><CR>
 "plugs
   let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
   if empty(glob(data_dir . '/autoload/plug.vim'))
