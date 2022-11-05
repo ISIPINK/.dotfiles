@@ -30,13 +30,12 @@ filetype plugin indent on
 "colours over column 80 
 hi Bang ctermfg=red guifg=red
 match Bang /\%>79v.*\%<81v/
-
 "key mappings
   inoremap jj <esc>
   noremap <F2> :NERDTreeToggle<cr>
   nnoremap <space> za
   noremap  <F4> :ClangFormat<cr>
-  autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:Cppman <cword><CR>
+  autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:cppman <cword><CR>
 "plugs
   let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
   if empty(glob(data_dir . '/autoload/plug.vim'))
