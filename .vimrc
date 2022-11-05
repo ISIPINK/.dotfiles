@@ -72,4 +72,8 @@ match Bang /\%>79v.*\%<81v/
   Plug 'jayli/vim-easycomplete'
   let g:easycomplete_tab_trigger="<c-space>"
   Plug 'sillybun/vim-repl'
+  let g:repl_program = {
+			\	'python': ['python3'],
+			\	'default': ['bash']
+			\	}
   call plug#end()
