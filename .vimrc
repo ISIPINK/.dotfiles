@@ -36,6 +36,7 @@ match Bang /\%>79v.*\%<81v/
   noremap <F2> :NERDTreeToggle<cr>
   nnoremap <space> za
   noremap  <F4> :ClangFormat<cr>
+  autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:Cppman <cword><CR>
 "plugs
   let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
   if empty(glob(data_dir . '/autoload/plug.vim'))
