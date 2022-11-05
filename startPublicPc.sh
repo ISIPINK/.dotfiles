@@ -1,5 +1,6 @@
-git config --global credential.helper "cache --timeout=${1=7200}"
-git config --global user.name "isi"
-git config --global user.email "isidoor.pinilloesquivel@student.uanwerpen.be"
+
+ln -s .dotfiles/.vimrc .vimrc
+ln -s .dotfiles/.vim .vim
+ln -s .dotfiles/.gitconfig .gitconfig
 
 firefox https://bitwarden.com  https://github.com  https://uantwerpen.be&
