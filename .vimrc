@@ -30,10 +30,6 @@ match Bang /\%>79v.*\%<81v/
 
 "key mappings
   let mapleader=","
-  noremap <Leader>w :w <cr> 
-  noremap <Leader>q :q <cr> 
-  noremap <Leader>g :G <cr> 
-  noremap <Leader>gc :G commit<cr> 
   inoremap jj <esc>
   noremap <F2> :NERDTreeToggle<cr>
   noremap  <F4> :ClangFormat<cr>
