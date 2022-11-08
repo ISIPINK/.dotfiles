@@ -29,11 +29,15 @@ hi Bang ctermfg=red guifg=red
 match Bang /\%>79v.*\%<81v/
 
 "key mappings
+  let mapleader=","
+  noremap <Leader>w :w <cr> 
+  noremap <Leader>q :q <cr> 
+  noremap <Leader>g :G <cr> 
+  noremap <Leader>gc :G commit<cr> 
   inoremap jj <esc>
   noremap <F2> :NERDTreeToggle<cr>
   noremap  <F4> :ClangFormat<cr>
   autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:!cppman <cword><CR>
-
   autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
   autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
@@ -46,27 +50,27 @@ match Bang /\%>79v.*\%<81v/
 
   call plug#begin()
   Plug 'preservim/NERDTree'
-  let NERDTreeShowHidden=1
+    let NERDTreeShowHidden=1
   Plug 'SirVer/ultisnips'
-  let g:UltiSnipsExpandTrigger = '<tab>'
-  let g:UltiSnipsJumpForwardTrigger = '<tab>'
-  let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-  let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+    let g:UltiSnipsExpandTrigger = '<tab>'
+    let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+    let g:UltiSnipsSnippetDirectories=["UltiSnips"]
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'airblade/vim-gitgutter'
   Plug 'rhysd/vim-clang-format'
-  let g:clang_format#detect_style_filea = 1
+    let g:clang_format#detect_style_filea = 1
   Plug 'dense-analysis/ale'
-  let g:ale_c_clangtidy_checks = 1
+    let g:ale_c_clangtidy_checks = 1
   Plug 'frazrepo/vim-rainbow'
-  let g:rainbow_active = 1
+    let g:rainbow_active = 1
   Plug 'lervag/vimtex'
-  let g:tex_flavor='latex'
-  let g:vimtex_view_method='zathura'
-  let g:vimtex_quickfix_mode=0
-  set conceallevel=1
-  let g:tex_conceal='abdmg'
+    let g:tex_flavor='latex'
+    let g:vimtex_view_method='zathura'
+    let g:vimtex_quickfix_mode=0
+    set conceallevel=1
+    let g:tex_conceal='abdmg'
   Plug 'jayli/vim-easycomplete'
-  let g:easycomplete_tab_trigger="<c-space>"
+    let g:easycomplete_tab_trigger="<c-space>"
   call plug#end()
