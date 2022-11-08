@@ -1,10 +1,6 @@
 " test
 syntax on
 filetype plugin indent on
-" enable folding
-  set foldmethod=indent
-  set foldlevel=99
-
 
 "spellcheck
   set spelllang=en_gb
@@ -35,7 +31,6 @@ match Bang /\%>79v.*\%<81v/
 "key mappings
   inoremap jj <esc>
   noremap <F2> :NERDTreeToggle<cr>
-  nnoremap <space> za
   noremap  <F4> :ClangFormat<cr>
   autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:!cppman <cword><CR>
 
@@ -60,8 +55,6 @@ match Bang /\%>79v.*\%<81v/
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'airblade/vim-gitgutter'
-  Plug 'tmhedberg/SimpylFold'
-  let g:SimpylFold_docstring_preview = 1
   Plug 'rhysd/vim-clang-format'
   let g:clang_format#detect_style_filea = 1
   Plug 'dense-analysis/ale'
