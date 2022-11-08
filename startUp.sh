@@ -5,4 +5,5 @@ ln -sf ~/.dotfiles/.gitconfig .gitconfig
 
 firefox about:preferences#search https://bitwarden.com  https://github.com  https://uantwerpen.be&
 
-set editing-mode vi
+set -o vi
+EDITOR=vim
