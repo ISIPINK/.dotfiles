@@ -3,8 +3,9 @@ syntax on
 filetype plugin indent on
 
 "spellcheck
-  set spelllang=en_gb
+  set spelllang=en_gb,nl
   inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+  set spell
 
 "sets
   set ts=2 sts=2 sw=2 et ai si
@@ -15,6 +16,7 @@ filetype plugin indent on
   set ignorecase
   autocmd VimEnter * NoMatchParen
 
+ au FileType python setlocal formatprg=autopep8\ -
  au BufNewFile, BufRead *.py
     \ set tabstop=4
     \ set softtabstop=4
