@@ -110,7 +110,7 @@ public:
 //The Big Three: destructor, copy constructor, assignment operator. If your class needs either of these, it probably needs them all!
 	$2();
 	$2(const $2& that) = default;
-	$2& operator=(const $2& that);
+	$2& operator=(const $2& that) = default;
 	~$2()= default;
 };
 

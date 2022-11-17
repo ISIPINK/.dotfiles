@@ -6,6 +6,9 @@ filetype plugin indent on
   set spelllang=en_gb,nl
   inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
   set spell
+  hi clear SpellBad
+  hi SpellBad cterm=underline
+  
 
 "sets
   set ts=2 sts=2 sw=2 et ai si
@@ -71,4 +74,9 @@ match Bang /\%>79v.*\%<81v/
     let g:tex_conceal='abdmg'
   Plug 'jayli/vim-easycomplete'
     let g:easycomplete_tab_trigger="<c-space>"
+    let g:easycomplete_tabnine_config = {
+    \ 'line_limit': 1000,
+    \ 'max_num_result' : 5,
+    \ }
+  Plug 'jiangmiao/auto-pairs'
   call plug#end()
